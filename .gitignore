@@ -1,0 +1,12 @@
+node_modules
+.next
+out
+.env*.local
+.DS_Store
+*.log
+.vercel
+next-env.d.ts
+
+# arquivos originais do briefing — não publicar
+/Landing Page Premium Futurista.txt
+/WhatsApp Image*.jpeg
