@@ -10,3 +10,5 @@ next-env.d.ts
 # arquivos originais do briefing — não publicar
 /Landing Page Premium Futurista.txt
 /WhatsApp Image*.jpeg
+
+.vercel
