@@ -1,6 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
+
+const GA_ID = "G-1K9KJT5KB3";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -105,6 +108,7 @@ export default function RootLayout({
       <body className="font-sans">
         {children}
       </body>
+      <GoogleAnalytics gaId={GA_ID} />
     </html>
   );
 }
