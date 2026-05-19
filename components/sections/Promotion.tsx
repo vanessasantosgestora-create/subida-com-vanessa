@@ -73,7 +73,7 @@ export function Promotion() {
                 </span>
               </div>
               <p className="mt-1 text-xs text-white/45">
-                Pagamento em até 12x · PIX com desconto extra
+                Pagamento em até 12x
               </p>
 
               <div className="mt-10">
