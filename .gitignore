@@ -6,6 +6,7 @@ out
 *.log
 .vercel
 next-env.d.ts
+tsconfig.tsbuildinfo
 
 # arquivos originais do briefing — não publicar
 /Landing Page Premium Futurista.txt
