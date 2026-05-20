@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, MessageCircle, Sparkles } from "lucide-react";
 import { Particles } from "@/components/Particles";
 import { VanessaPortrait } from "@/components/VanessaPortrait";
+import { trackMetaEvent } from "@/components/MetaPixel";
 import { buildWhatsappLink } from "@/lib/utils";
 
 const fadeUp = {
@@ -84,6 +85,9 @@ export function Hero() {
                 )}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() =>
+                  trackMetaEvent("Lead", { source: "hero_primary_cta" })
+                }
                 className="group inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500 px-7 py-3.5 text-sm font-semibold text-ink shadow-glow-gold transition-all hover:shadow-[0_0_70px_-10px_rgba(251,199,64,0.85)]"
               >
                 Quero minha landing premium
@@ -95,6 +99,9 @@ export function Hero() {
                 )}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() =>
+                  trackMetaEvent("Lead", { source: "hero_secondary_cta" })
+                }
                 className="group inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/[0.03] px-7 py-3.5 text-sm font-medium text-white transition-all hover:border-royal-200/40 hover:bg-white/[0.06]"
               >
                 <MessageCircle className="h-4 w-4 text-emerald-400" />

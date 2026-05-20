@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { buildWhatsappLink } from "@/lib/utils";
+import { trackMetaEvent } from "@/components/MetaPixel";
 
 export function WhatsAppButton() {
   return (
@@ -11,6 +12,9 @@ export function WhatsAppButton() {
       )}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={() => {
+        trackMetaEvent("Contact", { source: "whatsapp_floating_button" });
+      }}
       initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ delay: 1.4, type: "spring", stiffness: 200, damping: 18 }}

@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { MetaPixel } from "@/components/MetaPixel";
 import "./globals.css";
 
 const GA_ID = "G-1K9KJT5KB3";
@@ -107,6 +108,7 @@ export default function RootLayout({
     <html lang="pt-BR" className={`${inter.variable} ${display.variable}`}>
       <body className="font-sans">
         {children}
+        <MetaPixel />
       </body>
       <GoogleAnalytics gaId={GA_ID} />
     </html>

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { trackMetaEvent } from "@/components/MetaPixel";
 import { buildWhatsappLink } from "@/lib/utils";
 
 export function FinalCTA() {
@@ -42,6 +43,9 @@ export function FinalCTA() {
             )}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() =>
+              trackMetaEvent("Lead", { source: "final_cta" })
+            }
             className="group relative mt-9 inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500 px-9 py-4 font-semibold text-ink shadow-glow-gold transition-all hover:shadow-[0_0_70px_-10px_rgba(251,199,64,0.9)]"
           >
             Quero começar agora

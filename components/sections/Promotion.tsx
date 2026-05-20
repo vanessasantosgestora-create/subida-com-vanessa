@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Flame, Check, ArrowRight } from "lucide-react";
 import { Countdown } from "@/components/Countdown";
+import { trackMetaEvent } from "@/components/MetaPixel";
 import { buildWhatsappLink } from "@/lib/utils";
 
 const included = [
@@ -36,6 +37,14 @@ export function Promotion() {
           initial={{ opacity: 0, scale: 0.96, y: 30 }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
+          onViewportEnter={() =>
+            trackMetaEvent("ViewContent", {
+              content_name: "Promocao R$497",
+              content_category: "Landing Page Premium",
+              value: 497,
+              currency: "BRL",
+            })
+          }
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="border-glow relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-ink-soft via-[#0d0820] to-ink shadow-premium"
         >
@@ -91,6 +100,14 @@ export function Promotion() {
                 )}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() =>
+                  trackMetaEvent("InitiateCheckout", {
+                    content_name: "Promocao R$497",
+                    value: 497,
+                    currency: "BRL",
+                    source: "promotion_main_cta",
+                  })
+                }
                 className="group mt-10 inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500 px-8 py-4 font-semibold text-ink shadow-glow-gold transition-all hover:shadow-[0_0_70px_-10px_rgba(251,199,64,0.9)]"
               >
                 Garantir minha vaga agora
