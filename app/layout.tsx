@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { MetaPixel } from "@/components/MetaPixel";
+import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 const GA_ID = "G-1K9KJT5KB3";
@@ -18,8 +19,6 @@ const display = Space_Grotesk({
   weight: ["400", "500", "600", "700"],
   display: "swap",
 });
-
-const SITE_URL = "https://subidacomvanessa.com.br";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
